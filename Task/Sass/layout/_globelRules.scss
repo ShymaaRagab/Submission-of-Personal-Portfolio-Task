@@ -1,0 +1,17 @@
+@use "../variables/colorVariables" as *;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bodyBackground;
+  font-family: "Roboto", "Segoe UI", Tahoma, Helvetica, "Open Sans", arial,
+    serif;
+  font-size: 14px;
+  font-weight: 400;
+  direction: rtl;
+}

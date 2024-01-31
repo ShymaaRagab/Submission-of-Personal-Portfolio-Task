@@ -1,0 +1,610 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #e4ebf2;
+  font-family: "Roboto", "Segoe UI", Tahoma, Helvetica, "Open Sans", arial, serif;
+  font-size: 14px;
+  font-weight: 400;
+  direction: rtl;
+}
+
+nav .info a, nav .info .fa-bell, nav .info button {
+  font-weight: 500;
+  font-size: 18px;
+  color: #e8f1f8;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #247dbd;
+  -webkit-box-shadow: 0px 2px 14px 0px #b8bec3;
+          box-shadow: 0px 2px 14px 0px #b8bec3;
+  height: 45px;
+  padding: 10px;
+}
+nav ol {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+nav ol a {
+  color: #e8f1f8;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ol .previous {
+  position: relative;
+}
+nav ol .previous::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  bottom: 5px;
+  width: 6px;
+  height: 6px;
+  border-style: solid;
+  border-width: 2px 0px 0px 2px;
+  border-color: #e8f1f8;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+nav .info {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+nav .info li:hover {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+nav .info button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  height: 45px;
+  width: 90px;
+}
+nav .info button i {
+  font-size: 20px;
+  margin: 5px;
+}
+nav .info .fa-bell {
+  position: relative;
+  cursor: pointer;
+  font-size: 30px;
+  height: 45px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .info .fa-bell::after {
+  content: "7";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 7px;
+  top: 2px;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+}
+nav .info a {
+  color: #e8f1f8;
+  text-decoration: none;
+  font-weight: 500;
+  height: 45px;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+nav .info a i {
+  font-size: 30px;
+}
+nav .info a span {
+  direction: ltr;
+}
+nav .info a span p {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  ol a {
+    font-size: 12px;
+  }
+  .info {
+    gap: 0px !important;
+  }
+  .info a i,
+  .info a span {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  ol {
+    gap: 5px !important;
+  }
+  ol a {
+    font-size: 10px;
+  }
+  ol .previous::after {
+    left: -3px !important;
+    bottom: 4px !important;
+    width: 4px !important;
+    height: 4px !important;
+    border-style: solid;
+    border-width: 1px 0px 0px 1px !important;
+  }
+  .info {
+    gap: 0px !important;
+  }
+  .info button {
+    width: 40px !important;
+  }
+  .info button span {
+    display: none;
+  }
+  .info a {
+    gap: 0px !important;
+    width: 40px !important;
+  }
+  .info a span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  ol {
+    gap: 5px !important;
+  }
+  ol a {
+    font-size: 8px;
+  }
+  ol .previous::after {
+    left: 0px !important;
+    bottom: 4px !important;
+    width: 4px !important;
+    height: 4px !important;
+    border-style: solid;
+    border-width: 1px 0px 0px 1px !important;
+  }
+  .info {
+    gap: 0px !important;
+  }
+  .info button {
+    width: 40px !important;
+  }
+  .info button span {
+    display: none;
+  }
+  .info a {
+    gap: 0px !important;
+    width: 40px !important;
+  }
+  .info a span {
+    display: none;
+  }
+}
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 14px 0px #b8bec3;
+          box-shadow: 0px 2px 14px 0px #b8bec3;
+  height: 80px;
+  padding: 15px;
+  color: #444444;
+}
+header h3 {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+header .fa-gear {
+  font-size: 10px;
+  margin-right: 15px;
+}
+header .financial-transaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  position: relative;
+}
+header .financial-transaction::before {
+  content: "";
+  position: absolute;
+  background-color: #e4ebf2;
+  width: 5px;
+  height: 45px;
+  right: -20px;
+}
+header .financial-transaction button:first-of-type {
+  background-color: #e4ebf2;
+  cursor: pointer;
+  border: none;
+  height: 35px;
+  width: 55px;
+}
+header .financial-transaction button:first-of-type:hover {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header .financial-transaction button:first-of-type i {
+  color: #3a3e63;
+  font-size: 15px;
+  margin: 5px;
+}
+header .financial-transaction button:last-of-type {
+  background-color: #13b272;
+  cursor: pointer;
+  border: none;
+  height: 35px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+header .financial-transaction button:last-of-type span {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+header .financial-transaction button:last-of-type i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  width: 35%;
+  background-color: rgb(0, 127, 76);
+  height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 2px;
+  }
+  header .infoPage h3 {
+    font-size: 12px;
+  }
+  header .infoPage p {
+    font-size: 10px;
+  }
+  header .infoPage .fa-gear {
+    margin-right: 5px;
+  }
+  header .financial-transaction {
+    gap: 5px !important;
+  }
+  header .financial-transaction h4 {
+    font-size: 10px;
+  }
+  header .financial-transaction p {
+    font-size: 8px;
+  }
+  header .financial-transaction button:first-of-type {
+    height: 25px;
+    width: 35px;
+  }
+  header .financial-transaction button:first-of-type i {
+    font-size: 12px;
+    margin: 2px;
+  }
+  header .financial-transaction button:last-of-type {
+    height: 20px;
+    width: 55px;
+  }
+  header .financial-transaction button:last-of-type span {
+    padding-right: 2px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  header .financial-transaction button:last-of-type i {
+    font-size: 10px;
+  }
+}
+.main-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 20px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-area {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+aside {
+  width: 25%;
+  background-color: #fff;
+  margin-top: 5px;
+  height: 610px;
+}
+aside .searchPart {
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+  border-bottom: 3px solid #eee;
+}
+aside .searchPart .boxSearch {
+  width: 97%;
+  height: 43px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  color: #444444;
+  position: relative;
+}
+aside .searchPart .boxSearch::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  background-color: #afafaf;
+  top: 8px;
+  left: 35px;
+}
+aside .searchPart .boxSearch:hover {
+  border: 2px solid #247dbd;
+}
+aside .searchPart .boxSearch #mySearch {
+  all: unset;
+  width: 100%;
+}
+aside .searchPart .boxSearch i {
+  color: #eee;
+}
+aside .searchPart .boxSearch i:hover {
+  color: #444444;
+}
+aside .foldersPart {
+  padding: 10px 20px;
+  color: #336699;
+  font-size: 18px;
+}
+aside .foldersPart ul {
+  list-style: none;
+}
+aside .foldersPart ul li {
+  cursor: pointer;
+}
+aside .foldersPart .treeList li {
+  cursor: pointer;
+}
+aside .foldersPart .treeList .branch1 li {
+  padding: 5px 20px;
+}
+aside .foldersPart .treeList .branch2 li:first-child {
+  padding: 5px 20px;
+}
+aside .hidden1 {
+  display: none;
+}
+aside .hidden2 {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  aside {
+    width: 100%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+@media only screen and (max-width: 767px) {
+  aside {
+    width: 100%;
+  }
+}
+#content {
+  width: 74.5%;
+}
+
+.filterPart {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+}
+.filterPart button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  background-color: #dbe7f3;
+}
+.filterPart button:hover {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.filterPart .fa-chevron {
+  color: #3a3e63;
+  font-size: 20px;
+}
+.filterPart .down,
+.filterPart .left {
+  margin-right: -3px;
+}
+.filterPart .right,
+.filterPart .left {
+  background-color: #f5f5f5;
+}
+.filterPart input {
+  all: unset;
+  width: 250px;
+  height: 32px;
+  border: 1px solid #eee;
+  padding: 0px 5px;
+}
+
+table {
+  margin: 20px 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border-collapse: collapse;
+}
+table tr {
+  height: 55px;
+}
+table th,
+table td {
+  border-bottom: 1px solid #dddddd;
+  text-align: right;
+  padding: 8px;
+}
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 35%;
+}
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 25%;
+}
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 20%;
+}
+table th:nth-child(4),
+table td:nth-child(4) {
+  width: 20%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #content {
+    width: 100%;
+  }
+  .filterPart button {
+    width: 25px;
+    height: 25px;
+  }
+  .filterPart input {
+    height: 25px;
+    width: 150px;
+  }
+}
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+}

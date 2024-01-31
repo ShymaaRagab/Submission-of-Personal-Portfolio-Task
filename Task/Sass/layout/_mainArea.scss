@@ -1,0 +1,24 @@
+@use "../helpers/mixins" as *;
+@use "../variables/colorVariables" as *;
+
+.main-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 5px 20px;
+}
+@include BreakPointsScreen(medium) {
+  .main-area {
+    flex-direction: row;
+  }
+}
+@include BreakPointsScreen(small) {
+  .main-area {
+    flex-direction: column;
+  }
+}
+@include BreakPointsScreen(mobile) {
+  .main-area {
+    flex-direction: column;
+  }
+}

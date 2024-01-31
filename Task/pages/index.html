@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شجرة الحسابات دفترة</title>
+    <script
+      src="https://kit.fontawesome.com/b00402094c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="styleSheet" href="../Css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <ol>
+        <li class="previous Page">
+          <a href="./page1.html" onclick="loadPage('page1')">دليل الحسابات</a>
+        </li>
+        <li class="previous Page">
+          <a href="javascript:void(0);" onclick="loadPage('page1')"
+            >الأصول #1</a
+          >
+        </li>
+        <li class="previous Page">
+          <a href="javascript:void(0);" onclick="loadPage('page1')"
+            >الأصول المتداولة #12</a
+          >
+        </li>
+        <li class="previous Page">
+          <a href="javascript:void(0);" onclick="loadPage('page1')"
+            >الخزينة #1201</a
+          >
+        </li>
+        <li class="current Page">
+          <a href="#" onclick="loadPage('index')">الخزينة الأساسية #120101</a>
+        </li>
+      </ol>
+      <ul class="info">
+        <li>
+          <button>
+            <i class="fa-solid fa-circle-radiation"></i>
+            <span>المساعدة</span>
+          </button>
+        </li>
+        <li>
+          <i class="fa-solid fa-bell"></i>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-circle-user"></i>
+            <span
+              >Ramadan salem
+              <p>27/01/2024 13:23</p>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <div class="infoPage">
+        <h3>الخزينة الأساسية #120101 <i class="fa-solid fa-gear"></i></h3>
+        <p>
+          خزينه
+          <i class="fa-solid fa-circle-question"></i>
+          <a href="#">Main Treasury #1</a>
+        </p>
+      </div>
+      <div class="financial-transaction">
+        <div>
+          <h4>SAR 10,300.00</h4>
+          <p>مدين</p>
+        </div>
+        <button><i class="fa-solid fa-chart-pie"></i></button>
+        <button><span>قيد جديد</span> <i class="fa-solid fa-plus"></i></button>
+      </div>
+    </header>
+
+    <div class="main-area">
+      <aside>
+        <div class="searchPart">
+          <div class="boxSearch">
+            <input type="text" placeholder="ابحث" id="mySearch" />
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="foldersPart">
+          <ul class="folders">
+            <li class="treeList">
+              <span class="folderTreeList">
+                <i class="fa-solid fa-folder"></i> الاصول
+              </span>
+              <ul class="hidden1 branch1">
+                <li><i class="fa-solid fa-folder"></i> الاصول الثابتة</li>
+              </ul>
+              <ul class="hidden1 branch2">
+                <li>
+                  <span class="folderTree">
+                    <i class="fa-solid fa-folder"></i> الاصول المتداولة
+                  </span>
+                  <ul class="branch3 hidden2">
+                    <li class="">
+                      <i class="fa-solid fa-folder-open"></i>الخزينة
+                      <ul class="">
+                        <li>
+                          <i class="fa-regular fa-file"></i> الخزينة الاساسية
+                        </li>
+                      </ul>
+                    </li>
+                    <li><i class="fa-solid fa-folder"></i>البنك</li>
+                    <li><i class="fa-solid fa-folder"></i>المخزون</li>
+                    <li><i class="fa-solid fa-folder"></i>المدينون</li>
+                    <li><i class="fa-solid fa-folder"></i>عهد الموظفين</li>
+                    <li><i class="fa-solid fa-folder"></i>اوراق القبض</li>
+                    <li>
+                      <i class="fa-regular fa-file"></i> عجز & زيادة الصندوق
+                    </li>
+                    <li><i class="fa-regular fa-file"></i> تغيير العملة</li>
+                    <li><i class="fa-regular fa-file"></i> المشتريات</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><i class="fa-solid fa-folder"></i> الخصوم</li>
+            <li><i class="fa-solid fa-folder"></i> رأس المال وحقوق الملكية</li>
+            <li><i class="fa-solid fa-folder"></i> الايرادات</li>
+            <li><i class="fa-solid fa-folder"></i> المصروفات</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div id="content">
+        <section>
+          <div class="filterPart">
+            <div>
+              <button class="up">
+                <i class="fa-solid fa-chevron-up"></i>
+              </button>
+              <button class="down">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <input type="text" placeholder=" الفترة من / الي" />
+            </div>
+            <div>
+              <button class="right">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button class="left">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>العملية</th>
+                <th>مدين</th>
+                <th>دائن</th>
+                <th>الرصيد بعد</th>
+              </tr>
+            </thead>
+            <tbody id="transactionTableBody">
+              <!-- Transaction data will be inserted here -->
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <footer></footer>
+    <script src="../javaScript/InteractivityPages.js"></script>
+    <script src="../javaScript/folderTreeList.js"></script>
+    <script src="../javaScript/simpledatabaseRules.js"></script>
+  </body>
+</html>
+<!--
+  <i class="fa-solid fa-folder-open"></i>
+  <i class="fa-solid fa-chevron-up"></i> uparrow
+  <i class="fa-solid fa-chevron-down"></i> downArrow
+  <i class="fa-solid fa-chevron-right"></i>
+  <i class="fa-solid fa-chevron-left"></i>
+  <i class="fa-solid fa-life-ring"></i>
+  <i class="fa-solid fa-circle-radiation"></i>
+-->

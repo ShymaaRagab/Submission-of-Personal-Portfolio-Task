@@ -1,0 +1,198 @@
+@use "../variables/colorVariables" as *;
+@use "../helpers/mixins" as *;
+
+%Placeholder_1 {
+  font-weight: 500;
+  font-size: 18px;
+  color: $Font-color;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $barBackground;
+  box-shadow: 0px 2px 14px 0px #b8bec3;
+  height: 45px;
+  padding: 10px;
+  ol {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    a {
+      color: $Font-color;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .previous {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: -15px;
+        bottom: 5px;
+        width: 6px;
+        height: 6px;
+        border: {
+          style: solid;
+          width: 2px 0px 0px 2px;
+          color: $Font-color;
+        }
+        cursor: pointer;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .info {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    li {
+      &:hover {
+        @include OnHover;
+      }
+    }
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      @extend %Placeholder_1;
+      border: none;
+      height: 45px;
+      width: 90px;
+      i {
+        font-size: 20px;
+        margin: 5px;
+      }
+    }
+    .fa-bell {
+      @extend %Placeholder_1;
+      position: relative;
+      cursor: pointer;
+      font-size: 30px;
+      height: 45px;
+      width: 50px;
+      @include CenterByFlex;
+      &::after {
+        content: "7";
+        position: absolute;
+        @include CenterByFlex;
+        font-size: 7px;
+        top: 2px;
+        left: 9px;
+        @include makeCircle(15px);
+        background-color: red;
+        color: #fff;
+      }
+    }
+    a {
+      color: $Font-color;
+      text-decoration: none;
+      font-weight: 500;
+      height: 45px;
+      width: 180px;
+      @include CenterByFlex;
+      @extend %Placeholder_1;
+      gap: 10px;
+      i {
+        font-size: 30px;
+      }
+      span {
+        direction: ltr;
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@include BreakPointsScreen(medium) {
+  ol {
+    a {
+      font-size: 12px;
+    }
+  }
+  .info {
+    gap: 0px !important;
+    a {
+      i,
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+}
+@include BreakPointsScreen(small) {
+  ol {
+    gap: 5px !important;
+    a {
+      font-size: 10px;
+    }
+    .previous {
+      &::after {
+        left: -3px !important;
+        bottom: 4px !important;
+        width: 4px !important;
+        height: 4px !important ;
+        border: {
+          style: solid;
+          width: 1px 0px 0px 1px !important;
+        }
+      }
+    }
+  }
+  .info {
+    gap: 0px !important;
+    button {
+      width: 40px !important;
+      span {
+        display: none;
+      }
+    }
+    a {
+      gap: 0px !important;
+      width: 40px !important;
+      span {
+        display: none;
+      }
+    }
+  }
+}
+@include BreakPointsScreen(mobile) {
+  ol {
+    gap: 5px !important;
+    a {
+      font-size: 8px;
+    }
+    .previous {
+      &::after {
+        left: 0px !important;
+        bottom: 4px !important;
+        width: 4px !important;
+        height: 4px !important ;
+        border: {
+          style: solid;
+          width: 1px 0px 0px 1px !important;
+        }
+      }
+    }
+  }
+  .info {
+    gap: 0px !important;
+    button {
+      width: 40px !important;
+      span {
+        display: none;
+      }
+    }
+    a {
+      gap: 0px !important;
+      width: 40px !important;
+      span {
+        display: none;
+      }
+    }
+  }
+}

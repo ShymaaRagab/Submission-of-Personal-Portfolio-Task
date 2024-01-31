@@ -1,0 +1,94 @@
+@use "../helpers/mixins" as *;
+@use "../variables/colorVariables" as *;
+@use "../variables/transitions" as *;
+
+aside {
+  width: 25%;
+  background-color: #fff;
+  margin-top: 5px;
+  height: 610px;
+  .searchPart {
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    border-bottom: 3px solid #eee;
+    .boxSearch {
+      width: 97%;
+      height: 43px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      color: $mainFont;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 25px;
+        background-color: #afafaf;
+        top: 8px;
+        left: 35px;
+      }
+      &:hover {
+        border: 2px solid $barBackground;
+      }
+      #mySearch {
+        all: unset;
+        width: 100%;
+      }
+      i {
+        color: #eee;
+        &:hover {
+          color: $mainFont;
+        }
+      }
+    }
+  }
+  .foldersPart {
+    padding: 10px 20px;
+    color: $folderColor;
+    font-size: 18px;
+    ul {
+      list-style: none;
+      li {
+        cursor: pointer;
+      }
+    }
+    .treeList {
+      li {
+        cursor: pointer;
+      }
+      .branch1 {
+        li {
+          padding: 5px 20px;
+        }
+      }
+      .branch2 {
+        li:first-child {
+          padding: 5px 20px;
+        }
+      }
+    }
+  }
+  .hidden1 {
+    display: none;
+  }
+  .hidden2 {
+    display: none;
+  }
+}
+
+@include BreakPointsScreen(small) {
+  aside {
+    width: 100%;
+    min-height: fit-content;
+  }
+}
+@include BreakPointsScreen(mobile) {
+  aside {
+    width: 100%;
+  }
+}
